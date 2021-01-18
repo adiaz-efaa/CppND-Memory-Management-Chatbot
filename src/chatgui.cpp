@@ -87,7 +87,7 @@ void ChatBotFrameImagePanel::paintNow()
 
 void ChatBotFrameImagePanel::render(wxDC &dc)
 {
-    // load backgroud image from file
+    // load background image from file
     wxString imgFile = imgBasePath + "sf_bridge.jpg";
     wxImage image;
     image.LoadFile(imgFile);
@@ -118,6 +118,7 @@ ChatBotPanelDialog::ChatBotPanelDialog(wxWindow *parent, wxWindowID id)
     ////
 
     // create chat logic instance
+    std::cout << "ChatBotPanelDialog Constructor calls ChatLogic Constructor" << std::endl;
     _chatLogic = new ChatLogic(); 
 
     // pass pointer to chatbot dialog so answers can be displayed in GUI

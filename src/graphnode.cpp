@@ -4,6 +4,7 @@
 GraphNode::GraphNode(int id)
 {
     _id = id;
+    std::cout << "GraphNode Constructor" << std::endl;
 }
 
 GraphNode::~GraphNode()
@@ -11,7 +12,8 @@ GraphNode::~GraphNode()
     //// STUDENT CODE
     ////
 
-    delete _chatBot; 
+    // delete _chatBot; Task 0
+    std::cout << "GraphNode Destructor" << std::endl;
 
     ////
     //// EOF STUDENT CODE

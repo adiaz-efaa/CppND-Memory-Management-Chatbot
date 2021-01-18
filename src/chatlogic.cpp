@@ -18,6 +18,7 @@ ChatLogic::ChatLogic()
     ////
 
     // create instance of chatbot
+    std::cout << "ChatLogic Constructor calls ChatBot Constructor" << std::endl;
     _chatBot = new ChatBot("../images/chatbot.png");
 
     // add pointer to chatlogic so that chatbot answers can be passed on to the GUI
@@ -33,6 +34,7 @@ ChatLogic::~ChatLogic()
     ////
 
     // delete chatbot instance
+    std::cout << "ChatLogic Destructor calls ChatBot Destructor" << std::endl;
     delete _chatBot;
 
     // delete all nodes
@@ -54,7 +56,7 @@ ChatLogic::~ChatLogic()
 template <typename T>
 void ChatLogic::AddAllTokensToElement(std::string tokenID, tokenlist &tokens, T &element)
 {
-    // find all occurences for current node
+    // find all occurrences for current node
     auto token = tokens.begin();
     while (true)
     {
