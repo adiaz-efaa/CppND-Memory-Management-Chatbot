@@ -18,9 +18,7 @@ private:
     ////
 
     // data handles (owned)
-    // std::vector<GraphNode *> _nodes;
     std::vector<std::unique_ptr<GraphNode>> _nodes;
-    // std::vector<GraphEdge*> _edges;
 
     ////
     //// EOF STUDENT CODE
@@ -44,8 +42,8 @@ public:
     ~ChatLogic();
 
     // getter / setter
-    void SetPanelDialogHandle(ChatBotPanelDialog *panelDialog);
-    void SetChatbotHandle(ChatBot *chatbot);
+    void SetPanelDialogHandle(ChatBotPanelDialog* panelDialog);
+    void SetChatbotHandle(ChatBot* chatbot);
 
     // proprietary functions
     void LoadAnswerGraphFromFile(std::string filename);

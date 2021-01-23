@@ -117,14 +117,6 @@ ChatBotPanelDialog::ChatBotPanelDialog(wxWindow *parent, wxWindowID id)
     //// STUDENT CODE
     ////
 
-    // create chat logic instance
-    // Make _chatLogic an exclusive resource to class ChatbotPanelDialog using an appropriate smart pointer.
-    // Where required, make changes to the code such that data structures and function parameters
-    // reflect the new structure.
-    // Old:
-    // _chatLogic = new ChatLogic();
-
-    // New:
     std::cout << "ChatBotPanelDialog Constructor calls ChatLogic Constructor" << std::endl;
     _chatLogic = std::make_unique<ChatLogic>();
 
@@ -143,8 +135,7 @@ ChatBotPanelDialog::~ChatBotPanelDialog()
     //// STUDENT CODE
     ////
 
-    // Old:
-    // delete _chatLogic;
+    std::cout << "ChatBotPanelDialog Destructor" << std::endl;
 
     ////
     //// EOF STUDENT CODE
